@@ -36,3 +36,17 @@ Backend do projeto **Classificador de E-mails**, responsável por:
 ```bash
 git clone https://github.com/kakiih/classificador-email-backend.git
 cd classificador-email-backend
+
+python -m venv venv
+source venv/bin/activate   # Linux/Mac
+venv\Scripts\activate      # Windows
+
+pip install -r requirements.txt
+
+MISTRAL_API_KEY=SUA_KEY_MISTRAL_AQUI
+MISTRAL_MODEL=mistral-small-latest
+LOCAL_MODEL_NAME=nicholasKluge/TeenyTinyLlama-160m
+MAX_TOKENS=120
+
+ uvicorn app.main:app --reload
+
