@@ -82,6 +82,29 @@ def generate_response_with_mistral(email_text: str, category: str, max_tokens: i
         "Escreva apenas a resposta final formatada."
     )
 
+# import json
+
+# def classify_email_with_ai(email_text: str) -> dict:
+#     """
+#     Classifica o email usando IA e retorna dict com 'categoria' e 'confianca'.
+#     """
+#     prompt = (
+#         "Você é um assistente que classifica e-mails corporativos em duas categorias:\n"
+#         "- 'Produtivo': mensagens que exigem ação profissional ou resposta, como solicitações de suporte, dúvidas sobre processos, atualizações de projetos, documentos importantes, pedidos ou problemas.\n"
+#         "- 'Improdutivo': mensagens que não necessitam ação, incluindo spam, mensagens de bom dia, felicitações, agradecimentos ou qualquer conteúdo não relacionado a tarefas profissionais.\n\n"
+#         "Leia o e-mail abaixo e responda APENAS no seguinte formato JSON:\n"
+#         "{\"categoria\": \"Produtivo\" ou \"Improdutivo\", \"confianca\": valor_decimal_de_0.1_a_0.9}\n\n"
+#         f"E-mail:\n{email_text}\n\nCategoria e confiança:"
+#     )
+
+#     # chama a função de IA que você já tem, por exemplo generate_response_with_mistral ou TTL local
+#     resp_text = generate_response(email_text, prompt)  # pode adaptar se precisar
+#     try:
+#         return json.loads(resp_text)
+#     except Exception:
+#         # fallback caso IA retorne algo inesperado
+#         return {"categoria": "Improdutivo", "confianca": 0.5}
+
 
     # usamos client por chamada com 'with' (documentação do cliente). Você também pode manter um client global.
     try:
