@@ -6,7 +6,7 @@ from app.utils import read_upload_file
 import json
 import re
 
-app = FastAPI(title="AutoU Email Classifier")
+app = FastAPI(title="Classificador de email")
 
 app.add_middleware(
     CORSMiddleware,
